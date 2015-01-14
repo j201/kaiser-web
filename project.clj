@@ -3,7 +3,8 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2665"]]
+                 [org.clojure/clojurescript "0.0-2665"]
+                 [reagent "0.5.0-alpha"]]
 
   :node-dependencies [[source-map-support "0.2.8"]]
 
@@ -19,6 +20,7 @@
               :source-paths ["src"]
               :compiler {
                 :output-to "kaiser_web.js"
+                :preamble ["reagent/react.js"]
                 :output-dir "out"
                 :optimizations :none
                 :cache-analysis true                
